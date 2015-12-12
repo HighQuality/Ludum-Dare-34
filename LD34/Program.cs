@@ -18,6 +18,7 @@ namespace LD34
 
             Engine.EventHost.RegisterEvent<InitializeEvent>(0, ev =>
             {
+                Engine.ResourceHost.LoadDictionary("main", "Resources");
                 Engine.SceneHost.Push(Engine.SceneHost.CreateLocal<MainScene>());
             });
 
